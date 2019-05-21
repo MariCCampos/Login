@@ -18,24 +18,29 @@
         <Entry Placeholder ="E-mail" PlaceholderColor="White"
            FontAttributes="Bold"
            BackgroundColor="Black"
+           TextColor="White"
            HorizontalTextAlignment="Center"
            SelectionLength="20"
            HorizontalOptions="FillAndExpand"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" 
+           x:Name="email"/>
 
         <Entry Placeholder ="Senha" PlaceholderColor="White"
            FontAttributes="Bold"
            BackgroundColor="Black"
+           TextColor="White"
            HorizontalTextAlignment="Center"
            SelectionLength="20"
            HorizontalOptions="FillAndExpand"
-           VerticalOptions="CenterAndExpand"/>
+           VerticalOptions="CenterAndExpand"
+           x:Name="senha"/>
 
         <Button Text="Login"
            FontAttributes="Bold"
            BackgroundColor="White"
            VerticalOptions="CenterAndExpand"
            HorizontalOptions="Center"
+           Clicked="Logar"
          />
 
     </StackLayout>
