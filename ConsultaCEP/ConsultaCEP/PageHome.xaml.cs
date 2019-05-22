@@ -16,5 +16,11 @@ namespace ConsultaCEP
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public void Sair(object obj, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MainPage());
+        }
+
+    }
 }

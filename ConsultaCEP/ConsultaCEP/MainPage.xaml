@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ConsultaCEP"
              x:Class="ConsultaCEP.MainPage"
-             
-             BackgroundImage="universo.jpg"
-            
-        
-             >
+             BackgroundImage="flor.jpg">
 
     <StackLayout 
     VerticalOptions="FillAndExpand" 
@@ -15,20 +11,20 @@
     Margin="50">
 
        
-        <Entry Placeholder ="E-mail" PlaceholderColor="White"
+        <Entry Placeholder ="E-mail" PlaceholderColor="Black"
            FontAttributes="Bold"
-           BackgroundColor="Black"
-           TextColor="White"
+           BackgroundColor="WhiteSmoke"
+           TextColor="Black"
            HorizontalTextAlignment="Center"
            SelectionLength="20"
            HorizontalOptions="FillAndExpand"
            VerticalOptions="CenterAndExpand" 
            x:Name="email"/>
 
-        <Entry Placeholder ="Senha" PlaceholderColor="White"
+        <Entry Placeholder ="Senha" PlaceholderColor="Black"
            FontAttributes="Bold"
-           BackgroundColor="Black"
-           TextColor="White"
+           BackgroundColor="WhiteSmoke"
+           TextColor="Black"
            HorizontalTextAlignment="Center"
            SelectionLength="20"
            HorizontalOptions="FillAndExpand"
@@ -40,8 +36,7 @@
            BackgroundColor="White"
            VerticalOptions="CenterAndExpand"
            HorizontalOptions="Center"
-           Clicked="Logar"
-         />
+           Clicked="Logar"/>
 
     </StackLayout>
 

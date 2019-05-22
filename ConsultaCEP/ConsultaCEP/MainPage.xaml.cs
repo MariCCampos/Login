@@ -30,7 +30,7 @@ namespace ConsultaCEP
             bianca.senha = "pato";
             usuarios.Add(bianca);
 
-
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 
