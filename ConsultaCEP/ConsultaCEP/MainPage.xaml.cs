@@ -10,7 +10,7 @@ namespace ConsultaCEP
 {
     public partial class MainPage : ContentPage
     {
-        public List<Usuarios> usuarios = new List<Usuarios>();]
+        public List<Usuarios> usuarios = new List<Usuarios>();
         public Usuarios mariana = new Usuarios();
         public Usuarios anderson = new Usuarios();
         public Usuarios bianca = new Usuarios();
@@ -34,21 +34,43 @@ namespace ConsultaCEP
             InitializeComponent();
         }
 
-               
-        public void Logar( object obj, EventArgs args)
+
+        public void Logar(object obj, EventArgs args)
         {
-            
-            if(email.Text != null && senha.Text != null && email.Text != "" && senha.Text != "")
+            int cont = 0;
+            bool validador = false;
+
+            if (email.Text != null && senha.Text != null && email.Text != "" && senha.Text != "")
             {
-                App.Current.MainPage = new NavigationPage(new PageHome());
+                for (cont = 0; cont < usuarios.Count; cont++)
+                {
+                    if (email.Text == usuarios[cont].email && senha.Text == usuarios[cont].senha)
+                    {
+                        validador = true;
+                        break;
+                    }
+                    else
+                    {
+                        validador = false;
+                    }
+                }
+
+                if (validador == true)
+                {
+                    App.Current.MainPage = new NavigationPage(new PageHome());
+                }
+
+                else
+                {
+                    DisplayAlert("Alerta", "E-mail ou senha invalidos", "sair");
+                }
             }
+
             else
             {
-                DisplayAlert("Alerta", "E-mail ou senha invalidos", "sair");
+                DisplayAlert("Alerta", "Campos não podem estar vazios.", "sair");
             }
 
         }
-
-        
     }
 }
